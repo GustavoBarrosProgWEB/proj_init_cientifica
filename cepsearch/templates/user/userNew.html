@@ -1,0 +1,55 @@
+{% extends 'base/base.html' %}
+{% block content %}
+    <section class="container">
+      <br>
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title fw-bold">Cadastro de usuário</h5>
+          <form method="POST" action="save/">
+            {% csrf_token %}
+            <label>Nome:</label>
+              <input
+                name="name"
+                type="text"
+                id="name"
+                value=""
+                maxlength="255"
+                required /></label
+            ><br />
+            <label>Sobrenome:
+              <input
+                name="surname"
+                type="text"
+                id="surname"
+                value=""
+                maxlength="255"
+                required /></label
+            ><br />
+            <label>Cep:
+              <input
+                name="cep"
+                type="text"
+                id="cep"
+                value=""
+                onblur="pesquisacep(this.value);"
+                required /></label
+            ><br />
+            <label>Rua: <input name="rua" type="text" id="rua" required /></label
+            ><br />
+            <label>Bairro:
+              <input name="bairro" type="text" id="bairro" required /></label
+            ><br />
+            <label>Cidade:
+              <input name="cidade" type="text" id="cidade" required /></label
+            ><br />
+            <label>Estado: <input name="uf" type="text" id="uf" required /></label
+            ><br />
+            <p class="card-text mb-1">
+              Clique no botão abaixo para cadastrar o usuário.
+            </p>
+            <button class="btn btn-primary">Cadastrar</button>
+          </form>
+        </div>
+      </div>
+    </section>
+{% endblock %}

@@ -1,0 +1,68 @@
+{% extends 'base/base.html' %}
+{% block content %}
+    <section class="container">
+      <br />
+      <div class="card">
+        <div class="card-body">
+          {% if users != null and users.count > 0 %}
+          <h5 class="card-title fw-bold">
+            Usuários cadastrados :: '{{users.count}}'
+          </h5>
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col"># ID</th>
+                <th scope="col">Name</th>
+                <th scope="col">Surname</th>
+                <th scope="col">Cep</th>
+                <th scope="col">Rua</th>
+                <th scope="col">Bairro</th>
+                <th scope="col">Cidade</th>
+                <th scope="col">UF</th>
+                <th scope="col">Published_date</th>
+                <th scope="col">Created_date</th>
+                <th scope="col">Edit</th>
+                <th scope="col">Delete</th>
+              </tr>
+            </thead>
+            <tbody class="table-group-divider">
+              {% for user in users %}
+              <tr>
+                <th scope="row">{{user.id}}</th>
+                <td>{{user.name}}</td>
+                <td>{{user.surname}}</td>
+                <td>{{user.cep}}</td>
+                <td>{{user.rua}}</td>
+                <td>{{user.bairro}}</td>
+                <td>{{user.cidade}}</td>
+                <td>{{user.uf}}</td>
+                <td>{{user.published_date}}</td>
+                <td>{{user.created_date}}</td>
+                <td>
+                  <form action="edit/{{user.id}}/" method="GET">
+                    {% csrf_token %}
+                    <button><i class="bi bi-pencil"></i></button>
+                  </form>
+                </td>
+                <td>
+                  <form action="{{user.id}}/" method="GET">
+                    {% csrf_token %}
+                    <button><i class="bi bi-trash3"></i></button>
+                  </form>
+                </td>
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+          {% else %}
+          <h5 class="card-title fw-bold">Usuários</h5>
+          <p>
+            <i class="bi bi-database-fill-exclamation"></i> Usuários não
+            cadastrados.
+          </p>
+          {% endif %}
+        </div>
+      </div>
+    </section>
+{% endblock %}
+  

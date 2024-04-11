@@ -1,0 +1,23 @@
+{% extends 'base/base.html' %}
+{% block content %}
+{% load static %}
+<br>
+    <section class="container d-flex">
+      <div class="card m-3" style="width: 10rem;">
+        <img src="{% static 'img/editar.png' %}" style="width: 10rem;" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title fw-bold">Usuários</h5>
+          <p class="card-text">Editação de usuários do sistema.</p>
+          <a href="/users" class="btn btn-success">Editar</a>
+        </div>
+      </div>
+      <div class="card m-3" style="width: 10rem;">
+        <img src="{% static 'img/cadastrar.png' %}" style="width: 10rem;" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title fw-bold">Cadastro</h5>
+          <p class="card-text">Inserir novos usuários no sistema.</p>
+          <a href="/users/new" class="btn btn-primary">Cadastar</a>
+        </div>
+      </div>
+    </section>
+{% endblock %}

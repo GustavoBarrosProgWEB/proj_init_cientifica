@@ -1,0 +1,41 @@
+{% extends 'base/base.html' %} {% block content %}
+<section class="container">
+  <br />
+  <div class="card">
+    <div class="card-body">
+      
+      <h5 class="card-title fw-bold">Usuários cadastrados :: '{{user.id}}'</h5>
+      <form action="save/" method="POST">
+        {% csrf_token %}
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">ID</th>
+              <th scope="col">Name</th>
+              <th scope="col">Surname</th>
+              <th scope="col">Cep</th>
+              <th scope="col">Rua</th>
+              <th scope="col">Bairro</th>
+              <th scope="col">Cidade</th>
+              <th scope="col">UF</th>
+            </tr>
+          </thead>
+          <tbody class="table-group-divider">
+            <tr>
+              <th scope="row"><input class="bg-light" type="text" name="id" id="id" value={{user.id}} readonly></th>
+              <td><input type="text" name="name" id="name" value={{user.name}}></td>
+              <td><input type="text" name="surname" id="surname" value={{user.surname}}></td>
+              <td><input type="text" name="cep" id="cep" value={{user.cep}}></td>
+              <td><input type="text" name="rua" id="rua" value={{user.rua}}></td>
+              <td><input type="text" name="bairro" id="bairro" value={{user.bairro}}></td>
+              <td><input type="text" name="cidade" id="cidade" value={{user.cidade}}></td>
+              <td><input type="text" name="uf" id="uf" value={{user.uf}}></td>
+            </tr>
+          </tbody>
+        </table>
+        <button class="btn btn-primary">Salvar alterações</button>
+      </form>
+    </div>
+  </div>
+</section>
+{% endblock %}

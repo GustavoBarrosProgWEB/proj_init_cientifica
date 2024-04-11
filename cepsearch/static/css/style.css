@@ -1,0 +1,21 @@
+* {
+  font-family: "Nunito", "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+input {
+  margin: 0 0 0.65rem 0;
+  width: 100%;
+}
+
+label {
+  width: 100%;
+}
+
+img.navbar-brand {
+  width: 2.5rem;
+}
+
+.card img{
+  align-items: center;
+}
