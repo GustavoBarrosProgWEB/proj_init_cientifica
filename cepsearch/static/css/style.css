@@ -6,6 +6,10 @@
 input {
   margin: 0 0 0.65rem 0;
   width: 100%;
+  background-color: rgb(245, 245, 245);
+  border: 2px solid;
+  border-radius: 5px;
+  border-color: rgb(218, 218, 218);
 }
 
 label {

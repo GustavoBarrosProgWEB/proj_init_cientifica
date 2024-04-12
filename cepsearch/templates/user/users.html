@@ -8,10 +8,10 @@
           <h5 class="card-title fw-bold">
             Usuários cadastrados :: '{{users.count}}'
           </h5>
-          <table class="table">
+          <table class="table align-center">
             <thead>
               <tr>
-                <th scope="col"># ID</th>
+                <th scope="col" class="text-center">#ID</th>
                 <th scope="col">Name</th>
                 <th scope="col">Surname</th>
                 <th scope="col">Cep</th>
@@ -28,7 +28,7 @@
             <tbody class="table-group-divider">
               {% for user in users %}
               <tr>
-                <th scope="row">{{user.id}}</th>
+                <th scope="row" class="text-center"><p class="bg-light">{{user.id}}</p></th>
                 <td>{{user.name}}</td>
                 <td>{{user.surname}}</td>
                 <td>{{user.cep}}</td>
