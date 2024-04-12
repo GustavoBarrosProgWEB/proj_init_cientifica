@@ -22,14 +22,14 @@
           </thead>
           <tbody class="table-group-divider">
             <tr>
-              <th scope="row" class="text-center"><p class="bg-dark border border-2 rounded px-2 text-white">{{user.id}}</p></th>
-              <td><input type="text" name="name" id="name" value={{user.name}}></td>
-              <td><input type="text" name="surname" id="surname" value={{user.surname}}></td>
-              <td><input type="text" name="cep" id="cep" value={{user.cep}}></td>
-              <td><input type="text" name="rua" id="rua" value={{user.rua}}></td>
-              <td><input type="text" name="bairro" id="bairro" value={{user.bairro}}></td>
-              <td><input type="text" name="cidade" id="cidade" value={{user.cidade}}></td>
-              <td><input type="text" name="uf" id="uf" value={{user.uf}}></td>
+              <th scope="row" class="text-center"><input class="bg-dark border border-2 rounded px-2 text-white" type="text" name="id" id="id" value={{user.id}} readonly></th>
+              <td><input type="text" name="name" id="name" value="{{user.name}}"></td>
+              <td><input type="text" name="surname" id="surname" value="{{user.surname}}"></td>
+              <td><input type="text" name="cep" id="cep" value="{{user.cep}}"></td>
+              <td><input type="text" name="rua" id="rua" value="{{user.rua}}"></td>
+              <td><input type="text" name="bairro" id="bairro" value="{{user.bairro}}"></td>
+              <td><input type="text" name="cidade" id="cidade" value="{{user.cidade}}"></td>
+              <td><input type="text" name="uf" id="uf" value="{{user.uf}}"></td>
             </tr>
           </tbody>
         </table>
