@@ -4,8 +4,8 @@
       <br>
       <div class="card">
         <div class="card-body">
-          <h5 class="card-title fw-bold">Cadastro de usuário</h5>
-          <form method="POST" action="save/">
+          <h5 class="card-title fw-bold">Cadastro de usuário AQUI</h5>
+          <form method="POST" action="{% url 'usersNewSave' %}">
             {% csrf_token %}
             <label>Nome:</label>
               <input

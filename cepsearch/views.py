@@ -1,5 +1,9 @@
+from django.http import HttpResponse
 from django.shortcuts import render, redirect
 from cepsearch.models import Users
+
+def teste(request):
+    return HttpResponse ("Testando URL")
 
 def usersave(request):
     user = Users()

@@ -5,7 +5,7 @@
     <div class="card-body">
       
       <h5 class="card-title fw-bold">Usuários cadastrados :: '{{user.id}}'</h5>
-      <form action="save/" method="POST">
+      <form action="{% url 'userEditSave' user.id %}" method="POST">
         {% csrf_token %}
         <table class="table">
           <thead>
