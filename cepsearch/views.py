@@ -49,12 +49,11 @@ def usersEdit(request, id):
         user.cidade = request.POST.get('cidade')
         user.uf = request.POST.get('uf')
         user.save()
-        return redirect('users')
     if (request.method == 'GET'):
         user = Users.objects.get(id=id)
         user.delete()
-        return redirect('users')
-    
+    return redirect('users')
+
 def view_404(request, exception=None):
     return render(request,'error/404.html')
     
